@@ -17,6 +17,11 @@ class UserRepository implements UserRepositoryInterface
         ]);
     }
 
+    public function findByEmail($email)
+    {
+        return User::query()->where('email', $email)->first();
+    }
+
 
 
 }
